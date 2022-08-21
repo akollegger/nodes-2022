@@ -12,27 +12,37 @@
   },
   "tasksRunnerOptions": {
     "default": {
-      "runner": "@nrwl/workspace/tasks-runners/default",
+      "runner": "@nrwl/nx-cloud",
       "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
+        "cacheableOperations": ["build", "lint", "test", "e2e"],
+        "accessToken": "ZTBmM2YxZDAtODQ2NC00MWNiLWE5ZWYtM2JlMjg5MGJkZjlkfHJlYWQtd3JpdGU=",
+        "parallel": 1
       }
     }
   },
-  "targetDependencies": {
-    "build": [
-      {
-        "target": "build",
-        "projects": "dependencies"
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "generators": {
+    "@nrwl/react": {
+      "application": {
+        "style": "css",
+        "linter": "eslint",
+        "babel": true
+      },
+      "component": {
+        "style": "css"
+      },
+      "library": {
+        "style": "css",
+        "linter": "eslint"
       }
-    ]
-  },
-  "projects": {
-    "nodes": {
-      "tags": []
-    },
-    "nodes-e2e": {
-      "tags": [],
-      "implicitDependencies": ["nodes"]
     }
+  },
+  "targetDefaults": {
+    "build": {
+      "dependsOn": ["^build"]
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/react"
   }
 }
