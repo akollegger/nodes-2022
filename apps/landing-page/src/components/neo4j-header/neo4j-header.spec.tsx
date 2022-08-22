@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import WelcomePage from './welcome-page';
+import Neo4jHeader from './neo4j-header';
 
-describe('WelcomePage', () => {
+describe('Neo4jHeader', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<WelcomePage />);
+    const { baseElement } = render(<Neo4jHeader />);
     expect(baseElement).toBeTruthy();
   });
 });

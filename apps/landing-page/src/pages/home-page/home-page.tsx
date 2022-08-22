@@ -1,11 +1,11 @@
-import './welcome-page.css';
+import './home-page.css';
 
 /* eslint-disable-next-line */
 export interface WelcomePageProps {}
 
 export function WelcomePage(props: WelcomePageProps) {
   return (
-    <div>
+    <div className="prose">
       <h1>Welcome to WelcomePage!</h1>
     </div>
   );

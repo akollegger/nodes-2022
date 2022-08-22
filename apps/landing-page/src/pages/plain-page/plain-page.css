@@ -1,0 +1,14 @@
+.neo4j-page #nodes-hero::before {
+	content: url('https://dist.neo4j.com/wp-content/uploads/20220727094755/Art-2.svg');
+	position: absolute;
+	z-index: 39;
+	left: 0px;
+	top: 124px;
+}
+.neo4j-page #nodes-hero::after {
+	content: url('https://dist.neo4j.com/wp-content/uploads/20220727094754/Art-1.svg');
+	position: absolute;
+	z-index: 39;
+	right: 0px;
+	top: 124px;
+}
